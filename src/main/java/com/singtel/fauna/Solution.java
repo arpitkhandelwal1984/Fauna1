@@ -12,6 +12,7 @@ import com.singtel.fauna.fish.Clownfish;
 import com.singtel.fauna.fish.Dolphin;
 import com.singtel.fauna.fish.Fish;
 import com.singtel.fauna.fish.Shark;
+import com.singtel.fauna.insect.Butterfly;
 import com.singtel.fauna.mammals.Cat;
 import com.singtel.fauna.mammals.Dog;
 import com.singtel.fauna.mammals.Mammal;
@@ -41,9 +42,10 @@ public class Solution {
         ((Parrot)parrot).setNeighbour(cat);
 
         Animal dolphin = new Dolphin();
+        Animal butterfly = new Butterfly();
 
         Animal[] animals = new Animal[]{
-                cat,dog,clownFish,shark,duck,chicken,rooster,parrot,dolphin
+                cat,dog,clownFish,shark,duck,chicken,rooster,parrot,dolphin,butterfly
         };
         analyse(animals);
     }

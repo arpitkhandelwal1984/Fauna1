@@ -18,8 +18,4 @@ public class Duck extends Bird implements ICanFly {
         System.out.println("A Duck says Quack, quack!");
     }
 
-    @Override
-    public void fly() {
-        System.out.println("A Duck can fly!");
-    }
 }

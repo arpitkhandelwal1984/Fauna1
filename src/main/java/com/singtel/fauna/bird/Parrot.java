@@ -20,11 +20,6 @@ public class Parrot extends Bird implements ICanFly {
     }
 
     @Override
-    public void fly() {
-        System.out.println("A Parrot can fly!");
-    }
-
-    @Override
     public void say(){
         if(neighbour instanceof Dog){
             System.out.println("I stay with a Dog!");
