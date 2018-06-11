@@ -1,21 +1,31 @@
-package com.singtel.fauna;
+package com.singtel.fauna.bird;
+
+import com.singtel.fauna.Animal;
+import com.singtel.fauna.behaviour.ICanFly;
+import com.singtel.fauna.mammals.Cat;
+import com.singtel.fauna.mammals.Dog;
+import com.singtel.fauna.ResidenceType;
 
 /**
  * Created by Arpit Khandelwal.
  */
-public class Parrot extends Bird {
+public class Parrot extends Bird implements ICanFly {
     private Animal neighbour;
 
     private ResidenceType resType;
 
     public Parrot(){
         super();
-        setCanSwim(false);
-        setCanFly(true);
         System.out.println("Hi, I am a Parrot!");
     }
 
-    void sing(){
+    @Override
+    public void fly() {
+        System.out.println("A Parrot can fly!");
+    }
+
+    @Override
+    public void say(){
         if(neighbour instanceof Dog){
             System.out.println("I stay with a Dog!");
             System.out.println("I utter - Woof, woof");

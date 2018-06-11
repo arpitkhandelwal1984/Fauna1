@@ -1,45 +1,36 @@
 package com.singtel.fauna;
 
+import com.singtel.fauna.bird.Bird;
+import com.singtel.fauna.bird.Chicken;
+import com.singtel.fauna.bird.Duck;
+import com.singtel.fauna.bird.Parrot;
+import com.singtel.fauna.fish.Clownfish;
+import com.singtel.fauna.fish.Dolphin;
+import com.singtel.fauna.fish.Fish;
+import com.singtel.fauna.fish.Shark;
+import com.singtel.fauna.mammals.Cat;
+import com.singtel.fauna.mammals.Dog;
+import com.singtel.fauna.mammals.Mammal;
+
 /**
  * Created by Arpit Khandelwal.
  */
 public class Solution {
     public static void main(String[] args) {
-        Animal dog = new Dog();
-        Animal cat = new Cat();
 
-        Bird bird = new Bird();
-        bird.walk();
-        bird.fly();
-        bird.sing();
+        Mammal cat = new Cat();
+        Mammal dog = new Dog();
+
+        Fish clownFish = new Clownfish();
+        ((Clownfish)clownFish).makeAJoke();
+        Fish shark = new Shark();
+        ((Shark)shark).eat(clownFish);
 
         Bird duck = new Duck();
-        duck.sing();
-        duck.fly();
-        duck.swim();
+        Bird chicken = new Chicken(Chicken.ChickenType.FEMALE);
+        Bird rooster = new Chicken(Chicken.ChickenType.MALE);
 
-        Bird chicken = new Chicken(Chicken.ChickenType.MALE);
-        chicken.sing();
-        chicken.fly();
-        chicken.swim();
-
-        Parrot parraot1 = new Parrot();
-        parraot1.setNeighbour(dog);
-        parraot1.sing();
-        parraot1.fly();
-        parraot1.swim();
-
-        Parrot parraot2 = new Parrot();
-        parraot2.setNeighbour(cat);
-        parraot2.sing();
-        parraot2.fly();
-        parraot2.swim();
-
-        Parrot parraot3 = new Parrot();
-        parraot3.setNeighbour(chicken);
-        parraot3.sing();
-        parraot3.fly();
-        parraot3.swim();
+        Animal dolphin = new Dolphin();
 
     }
 }

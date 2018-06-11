@@ -5,8 +5,27 @@ package com.singtel.fauna;
  */
 public abstract class Animal {
 
-    void walk(){
-        System.out.println("I am walking");
+    private String colour;
+
+    private Size size;
+
+    public enum Size{
+        SMALL, LARGE, HUGE;
     }
 
+    public String getColour() {
+        return colour;
+    }
+
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public void setSize(Size size) {
+        this.size = size;
+    }
 }
