@@ -16,6 +16,8 @@ import com.singtel.fauna.mammals.Cat;
 import com.singtel.fauna.mammals.Dog;
 import com.singtel.fauna.mammals.Mammal;
 
+import java.util.Locale;
+
 /**
  * Created by Arpit Khandelwal.
  */
@@ -32,7 +34,9 @@ public class Solution {
 
         Bird duck = new Duck();
         Bird chicken = new Chicken(Chicken.ChickenType.FEMALE);
+        chicken.say();
         Bird rooster = new Chicken(Chicken.ChickenType.MALE);
+        rooster.say();
         Bird parrot = new Parrot();
         ((Parrot)parrot).setNeighbour(cat);
 

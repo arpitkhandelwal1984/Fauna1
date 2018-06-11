@@ -1,6 +1,7 @@
 package com.singtel.fauna.bird;
 
 import com.singtel.fauna.bird.Bird;
+import com.singtel.fauna.util.LocaleUtil;
 
 /**
  * Created by Arpit Khandelwal.
@@ -22,7 +23,11 @@ public class Chicken extends Bird {
     @Override
     public void say() {
         if(ChickenType.MALE.equals(type)){
-            System.out.println("A Rooster says Cock-a-doodle-doo!");
+            if("English".equalsIgnoreCase(LocaleUtil.getCurrentLocale())) {
+                System.out.println("A Rooster says Cock-a-doodle-doo!");
+            }else if("Hindi".equalsIgnoreCase(LocaleUtil.getCurrentLocale())){
+                System.out.println("A Rooster says Ku-ka-do-ku!");
+            }
         }else {
             System.out.println("A Chicken says Cluck, cluck!");
         }
