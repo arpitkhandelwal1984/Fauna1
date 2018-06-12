@@ -47,10 +47,85 @@ public class Solution {
         Animal[] animals = new Animal[]{
                 cat,dog,clownFish,shark,duck,chicken,rooster,parrot,dolphin,butterfly
         };
-        analyse(animals);
+        int fliers = analyseFliers(animals);
+        int swimmers = analyseSwimmers(animals);
+        int singers = analyseSingers(animals);
+        int walkers = analyseWalkers(animals);
+
+        System.out.println("Number of Animals that can Fly = " + fliers + "\n " +
+                "Number of Animals that can Walk = " + walkers + "\n " +
+                "Number of Animals that can Sing = " + singers + "\n " +
+                "Number of Animals that can Swim = " + swimmers);
+
+
+        //unifiedAnalysis(animals);
     }
 
-    private static void analyse(Animal[] animals){
+    /**
+     * Analyse the flying animals
+     * @param animals
+     * @return
+     */
+    public static int analyseFliers(Animal[] animals) {
+        int canFly = 0;
+        for (Animal animal:animals) {
+            if(animal instanceof ICanFly){
+                canFly++;
+            }
+        }
+        return canFly;
+    }
+
+    /**
+     * Analyse the swimmers
+     * @param animals
+     * @return
+     */
+    public static int analyseSwimmers(Animal[] animals) {
+        int canSwim = 0;
+        for (Animal animal:animals) {
+            if(animal instanceof ICanSwim){
+                canSwim++;
+            }
+        }
+        return canSwim;
+    }
+
+    /**
+     * Analyse the singers
+     * @param animals
+     * @return
+     */
+    public static int analyseSingers(Animal[] animals) {
+        int canSing = 0;
+        for (Animal animal:animals) {
+            if(animal instanceof ICanSing) {
+                canSing++;
+            }
+        }
+        return canSing;
+    }
+
+    /**
+     * Analyse the walkers
+     * @param animals
+     * @return
+     */
+    public static int analyseWalkers(Animal[] animals) {
+        int canWalk = 0;
+        for (Animal animal:animals) {
+            if(animal instanceof ICanWalk){
+                canWalk++;
+            }
+        }
+        return canWalk;
+    }
+
+    /**
+     * Analyse all the behaviours in single go
+     * @param animals
+     */
+    private static void unifiedAnalysis(Animal[] animals){
         int canFly = 0;
         int canWalk = 0;
         int canSing = 0;

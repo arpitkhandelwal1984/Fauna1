@@ -1,12 +1,13 @@
 package com.singtel.fauna.bird;
 
 import com.singtel.fauna.behaviour.ICanFly;
+import com.singtel.fauna.behaviour.ICanSwim;
 import com.singtel.fauna.bird.Bird;
 
 /**
  * Created by Arpit Khandelwal.
  */
-public class Duck extends Bird implements ICanFly {
+public class Duck extends Bird implements ICanFly,ICanSwim {
 
     public Duck(){
         super();
